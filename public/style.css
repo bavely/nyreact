@@ -1,0 +1,75 @@
+body {
+    background-image: url("http://cdn.wallpapersafari.com/21/77/ewAoBl.jpg");
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+.page-header {
+    color: whitesmoke;
+    background-color: #313332;
+    border-radius: 5px;
+    margin-top: 8px;
+    width: 1200px;
+    margin-bottom: 100px;
+    padding: 10px;
+    height: 62px;
+}
+
+h4 {
+    font-family: 'UnifrakturCook', cursive;
+}
+
+h3 {
+    font-family: 'Sancreek', cursive;
+}
+
+label {
+    font-family: 'Sail', cursive;
+}
+
+.panel-heading {
+    color: whitesmoke;
+    background-color: #313332;
+    padding: 10px;
+}
+
+.savedBtn {
+    color: whitesmoke;
+    float: right;
+    position: relative;
+    bottom: 38px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.btn {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    font-size: 20px
+}
+
+.routBtn {
+    color: whitesmoke;
+    float: right;
+    position: relative;
+    bottom: 38px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.panel-heading {
+    color: whitesmoke;
+    background-color: #313332;
+}

@@ -1,0 +1,126 @@
+    dataRes: function(data){
+        return {
+            head: data.docs[0].headline.main
+        }
+        console.log(data.docs[0].headline.main);
+    },
+
+
+        getData: function (data) {
+        console.log(data.response.docs[0].headline.main);
+        console.log(data.response.docs[0].snippet)
+        console.log(data.response.docs[0].pub_date)
+        console.log(data.response.docs[0].news_desk)
+        console.log("http://www.nytimes.com/" + data.response.docs[0].multimedia[1].url)
+        console.log(data.response.docs[0].web_url)
+
+        return{
+
+            head: data.response.docs[1].headline.main,
+            paragraph: data.response.docs[1].snippet,
+            date: data.response.docs[1].pub_date,
+            newsDesk: data.response.docs[1].news_desk,
+            img: "http://www.nytimes.com/" + data.response.docs[1].multimedia[1].url,
+            url: data.response.docs[1].web_url
+        };
+
+    },
+
+
+        getInitialState: function () {
+        this.ajaxCall().then(function(res){
+        return {
+            test:res.head
+        }
+        });
+
+    },
+
+
+      var topic = $("#text").val().trim();
+        var startyear = $("#startyear").val().trim();
+        var endyear = $("#endyear").val().trim();
+        this.state({
+            topic,
+            startyear,
+            endyear
+        });
+
+
+               getInitialState: function() {
+        return {text: "", startyear: "", endyear:""};
+    },
+
+
+    .done(function (result) {
+           var data = result.response.docs.map(obj => obj.docs)
+           console.log(data)
+            this.setState({ data });
+        }.bind(this));
+
+ head={this.state.head}
+                paragraph={this.state.paragraph}
+                date={this.state.date}
+                newsDesk={this.state.newsDesk}
+                img={this.state.img}
+                url={this.state.url}
+
+
+
+                                            {this.props.resArr.map(function(news,i){
+                                return(
+                            <ul key={i}>
+                        <li><h3>{news.head}</h3></li>
+                        <li><img src={news.img} /></li>
+                        <li><p>{news.paragraph}</p></li>
+                        <li><a href={news.url} target="_blank">Read More</a></li>
+                        <li><h5>{news.date}</h5></li>
+                        <li><h5>{news.newsDesk}</h5></li>
+                            </ul>
+                            );
+                            })}
+
+
+                            <Results news={this.state.resArr}/>
+
+
+                            img: "http://www.nytimes.com/" + data.response.docs[i].multimedia[i].url,
+
+                                        if(!res.img){res.img = "http://tangopaparazzo.com/wp-content/themes/bohaute/images/blank.jpg"}
+            else{res.img="http://www.nytimes.com/" + data.response.docs[i].multimedia[i].url}
+
+
+
+
+
+
+
+
+
+
+
+            var hashHistory = router.hashHistory;
+
+              <Router history={hashHistory}>
+
+                </Router>
+
+                <Saved history={this.state.data}/>
+
+
+
+                            <div className="container">
+            	<div className=" row page-header ">
+		            <h4>New York Times Article Search</h4>
+                    <Link to="/Saved"><button className="btn btn-default savedBtn" onClick={this.gettingData} > Saved News </button></Link>
+                    <Link to="/Search"><button className="btn btn-default savedBtn"  > Saved News </button></Link >
+	            </div>
+                <Search />
+                <Saved history={this.state.data} />
+                {this.props.children}
+
+            </div>
+
+
+
+            <a className=" savedBtn" onClick={this.gettingData} > Saved News </a>
